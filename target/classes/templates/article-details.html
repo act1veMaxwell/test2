@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div class="container-mt5">
+    <H1>Список новостей</H1>
+    <div th:each="el : ${article}" class="alert alert-info mt-2">
+        <h3 th:text="${el.title}"/>
+        <em th:text="${el.text}"/>
+        <br>
+        <form th:action="'/home/' + ${el.id} + '/remove'" method="post">
+            <button  class="btn btn-warning">Удалить</button>
+        </form>
+        <br>
+        <a th:href="'/home/' + ${el.id} + '/edit'" class="btn btn-warning">Редактировать</a>
+    </div>
+
+</div>
+</body>
+</html>

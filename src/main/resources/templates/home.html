@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div class="container-mt5">
+    <H1>Список новостей</H1>
+    <div th:each="el : ${list}" class="alert alert-info mt-2">
+        <h3 th:text="${el.title}"/>
+        <a th:href="'/home/' + ${el.id}" class="btn btn-warning">Детальнее</a>
+
+    </div>
+
+</div>
+<br>
+<br>
+<br>
+<br>
+<b>
+    <a class="p-4 text-dark" href="/addPage"> Добавить новость</a>
+</b>
+</body>
+</html>
