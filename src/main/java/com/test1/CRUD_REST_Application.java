@@ -4,10 +4,10 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class ServingWebContentApplication {
+public class CRUD_REST_Application {
 
     public static void main(String[] args) {
-        SpringApplication.run(ServingWebContentApplication.class, args);
+        SpringApplication.run(CRUD_REST_Application.class, args);
     }
 
 }
